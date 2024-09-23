@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <style>
+        .prabhakar{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="btn">Click Button 1</button>
+    
+    <ul id="ulTag" data="valid">
+        <li>First Element</li>
+        <li>Second Element</li>
+        <li>Third Element</li>
+    </ul>
+
+    <p id="pEle" class="text pElement paragraph">This is DOM Manipulation</p>
+
+    <div>
+        <p>one</p>
+        <p>two</p>
+        <p>three</p>
+        <p>four</p>
+        <p>five</p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>age</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Prabhakar</td>
+                <td>20</td>
+                <td>Male</td>
+            </tr>
+            <tr>
+                <td>Diwakar</td>
+                <td>25</td>
+                <td>Male</td>
+            </tr>
+            <tr>
+                <td>Wasim</td>
+                <td>20</td>
+                <td>Male</td>
+            </tr>
+            <tr>
+                <td>Sonu</td>
+                <td>20</td>
+                <td>Male</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="" id="googleLink" target="_blank">Google</a>
+
+    <p id="myName" data-vill="Malahi" data-gender="male" data-age="21">Prabhakar</p>
+
+    <div class="container" style="background-color: yellow;">
+        <h2>My name is Prabhakar</h2>
+        <h2>My name is Diwakar</h2>
+    </div>
+    
+    <script>
+
+        // console.log(document)
+        // console.log(document.body.childNodes)
+
+        // console.log(document.body.children) // yah Array jaysa print hoga lekin yah Array nahi hai ise Array banae ke liye tatha Array ka total method use karne ke liye niche iska tarika bataya gya hai |
+        // const childrensList = Array.from(document.body.children)
+        // console.log(childrensList)
+
+        // console.log(document.body.firstElementChild)
+        // console.log(document.body.lastElementChild)
+        
+        // const ulTag = document.body.children[0];
+        // const firstLi = ulTag.children[0]; console.log(firstLi)
+        // const secondLi = ulTag.children[1]; console.log(secondLi)
+        // const thirdLi = ulTag.children[2]; console.log(thirdLi)
+
+        // console.log(document.body.children[2].children[3].nextElementSibling)
+        // console.log(document.body.children[2].children[3].previousElementSibling)
+
+        /*-------- <table>..</table> --------*/
+        // const tableTag = document.querySelector('table');
+        // console.log(tableTag)
+        // console.log(tableTag.tHead)
+        // console.log(tableTag.tBodies)
+        // console.log(tableTag.tBodies[0])
+        // console.log(tableTag.rows)
+        // console.log(tableTag.rows[0].cells)
+        // console.log(tableTag.tBodies[0].rows[0].cells)
+        // console.log(tableTag.tBodies[0].rows[0].cells[0])
+
+        // document.querySelectorAll('li').forEach((value) => value.style.fontSize = "25px" );
+        // document.querySelectorAll('ul > li:last-child')[0].style.color = "blue"
+        // document.querySelector('li').style.color = "red";
+        // document.querySelector('ul  > li:nth-child(2)').style.color = "orange";
+        // document.querySelector('ul  > li:last-child').style.backgroundColor = "#ececec";
+        
+        // const ulTag = document.getElementById('ulTag');
+        // console.log(ulTag.getAttribute("data"));
+        // ulTag.setAttribute('order-placed', 'pending');
+        // console.log(ulTag.getAttribute('order-placed'));
+        // console.log(ulTag.attributes)
+        // console.log(ulTag.hasAttribute("data"));
+        // ulTag.removeAttribute('data');
+        // console.log(ulTag.hasAttribute("data"));
+
+        // const googleLInk = document.getElementById('googleLink');
+        // googleLInk.setAttribute('href','https://www.google.com')
+        // console.log(googleLInk.attributes)
+
+        /*-------- Creating and Removing the node elemenets --------*/
+        // const newDiv = document.createElement('div');
+        // newDiv.textContent = "Hellow!"
+        // const newText = document.createTextNode('Namaste World!');
+        // newDiv.append(newText)
+        // document.body.prepend(newDiv);
+        // const newItalic = document.createElement('i');
+        // newItalic.innerHTML = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quibusdam fuga illum iusto dolor soluta!`;
+        // newDiv.appendChild(newItalic);
+        // newText.remove();
+
+        // const element = document.createElement('p')
+        // element.textContent = 'Diwakar'
+        // const element2= document.createElement('p')
+        // element2.textContent = 'Sonu'
+        // document.querySelector('#myName').before(element)
+        // document.querySelector('#myName').after(element2)
+        
+        const container = document.querySelector('.container');
+        container.insertAdjacentHTML('afterbegin','<h2>Hellow afterbegin</h2>');
+        container.insertAdjacentHTML('afterend','<h2>Hellow afterend</h2>');
+        container.insertAdjacentHTML('beforebegin','<h2>Hellow beforebegin</h2>');
+        container.insertAdjacentHTML('beforeend','<h2>Hellow beforeend</h2>');
+
+    </script>
+</body>
+</html>
