@@ -85,3 +85,51 @@ calculate(2)
 .then((result)=>{console.log('2', result)})
 .catch((error)=>{console.log('2', error)})
 */
+
+// Promises Chaining
+/*
+function getData(dataId){
+    return new Promise((resolve, reject)=>{
+        if(dataId){
+            setTimeout(()=>{
+                console.log('data', dataId)
+                resolve('successful')
+            } ,2000)
+        }
+        else {
+            reject('error')
+        }
+        
+    })
+}
+
+// getData(1).then(()=> { 
+//     getData(2).then(()=>{
+//         getData(3).then(()=>{
+//             getData(4)
+//         })
+//     });
+// });
+
+// getData(1)
+// .then(()=> { 
+//     return getData(2)
+// })
+// .then(()=> getData(3))
+// .then(()=> getData())
+// .then(()=>{
+//     getData(5)
+// })
+
+// getData(1)
+// .then(()=> { 
+//     return getData(2)
+// })
+// .then(()=> getData(3))
+// .then(()=> {
+//     getData() 
+// })
+// .then(()=>{
+//     getData(5)
+// })
+*/
