@@ -46,3 +46,42 @@ function getData(dataId){
     })
 }
 */
+
+/*
+function calculate(number1, number2){
+    return new Promise((resolve, reject)=>{
+        if(number2){
+            console.log(number1 + number2)
+            resolve('solve')
+        } else {
+            reject('error')
+        }
+    })
+}
+
+let value1 = calculate(5, 7);
+value1.then((result)=>{
+    console.log('5, 7', result)
+})
+value1.catch((error)=>{
+    console.log('5, 7', error)
+})
+
+let value2 = calculate(5);
+value2.then((result)=>{
+    console.log('5', result)
+})
+value2.catch((error)=>{
+    console.log('5', error)
+})
+
+calculate(2,3).then(
+    (result)=>{console.log('2,3', result)}
+).catch(
+    (error)=>{console.log('2,3', error)}
+)
+
+calculate(2)
+.then((result)=>{console.log('2', result)})
+.catch((error)=>{console.log('2', error)})
+*/
