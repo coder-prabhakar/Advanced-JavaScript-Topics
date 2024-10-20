@@ -133,3 +133,37 @@ function getData(dataId){
 //     getData(5)
 // })
 */
+
+
+/*----------------- Async-Await -----------------*/
+function getData(dataId){
+    return new Promise((resolve, reject)=>{
+        if(dataId){
+            setTimeout(()=>{
+                console.log('data', dataId)
+                resolve('successful')
+            } ,2000)
+        }
+        else {
+            reject('error')
+        }
+        
+    })
+}
+
+async function printData() {
+    console.log('data 1 processing............')
+    await getData(1);
+    console.log('data 2 processing............')
+    await getData(2);
+    console.log('data 3 processing............')
+    await getData(3);
+    console.log('data 4 processing............')
+    await getData(4);
+    console.log('last code of function')
+}
+
+printData();
+console.log('data 5 processing............')
+getData(5);
+console.log('last code')
