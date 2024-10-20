@@ -136,6 +136,7 @@ function getData(dataId){
 
 
 /*----------------- Async-Await -----------------*/
+/*
 function getData(dataId){
     return new Promise((resolve, reject)=>{
         if(dataId){
@@ -167,3 +168,22 @@ printData();
 console.log('data 5 processing............')
 getData(5);
 console.log('last code')
+*/
+
+
+/*---- IIFE -----*/
+/*
+(async function() {
+    await getData(1);
+    await getData(2);
+    await getData(3);
+    await getData(4);
+})();
+
+(async () => {
+    await getData(1);
+    await getData(2);
+    await getData(3);
+    await getData(4);
+})();
+*/
